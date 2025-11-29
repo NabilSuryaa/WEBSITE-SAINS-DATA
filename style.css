@@ -319,143 +319,6 @@ body {
     font-size: 18px;
   }
 }
-.logo:hover {
-  transform: rotate(5deg) scale(1.05);
-}
-
-.brand-text h1 {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  background: linear-gradient(135deg, var(--text-light), var(--accent2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.brand-text .subtitle {
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: 0.3px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
-
-.nav-links a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.nav-links a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, 
-    transparent, 
-    rgba(255,255,255,0.1), 
-    transparent);
-  transition: left 0.5s ease;
-}
-
-.nav-links a:hover {
-  color: var(--text-light);
-  background: rgba(255,255,255,0.05);
-  transform: translateY(-2px);
-}
-
-.nav-links a:hover::before {
-  left: 100%;
-}
-
-/* Enhanced Hero Section */
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 480px;
-  gap: 40px;
-  align-items: center;
-  min-height: 80vh;
-  animation: slideInUp 1s ease-out 0.2s both;
-}
-
-.hero-left {
-  padding: 40px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, 
-    rgba(255,255,255,0.03), 
-    rgba(255,255,255,0.01));
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  box-shadow: 
-    0 20px 60px rgba(8,4,16,0.5),
-    inset 0 1px 0 var(--glass-highlight);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-left::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, 
-    transparent, 
-    var(--accent1), 
-    var(--accent2), 
-    transparent);
-}
-
-.eyebrow {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, 
-    rgba(138,43,226,0.2), 
-    rgba(255,77,221,0.1));
-  color: var(--accent2-glow);
-  font-weight: 600;
-  font-size: 14px;
-  margin-bottom: 24px;
-  border: 1px solid rgba(255,77,221,0.2);
-  animation: slideInUp 0.8s ease-out 0.4s both;
-}
-
-.headline {
-  font-size: 3.5rem;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--accent2), var(--accent1), var(--accent2));
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: gradientShift 4s ease infinite, slideInUp 0.8s ease-out 0.6s both;
-}
-
-.sub {
-  color: var(--muted);
-  font-size: 18px;
-  margin-bottom: 32px;
-  line-height: 1.6;
-  animation: slideInUp 0.8s ease-out 0.8s both;
-}
-
 /* Enhanced CTA Buttons */
 .ctas {
   display: flex;
@@ -1407,56 +1270,38 @@ body {
   margin-top: 40px;
 }
 
-/* FOOTER MOBILE OPTIMIZATION */
+/* Footer Section */
 .footer-section {
-  margin-top: 50px;
-  padding: 40px 0 20px;
+  margin-top: 80px;
+  padding: 60px 0 30px;
   border-top: 1px solid rgba(255,255,255,0.1);
   background: linear-gradient(180deg, 
     rgba(255,255,255,0.02), 
     transparent);
-  font-size: 14px; /* Base font size lebih kecil */
 }
 
 .footer-content {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-bottom: 30px;
-  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
-/* Footer Brand - Lebih Kompak */
 .footer-brand {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  text-align: center;
+  gap: 20px;
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.footer-logo .logo {
-  width: 35px;
-  height: 35px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--accent1), var(--accent2));
-  display: grid;
-  place-items: center;
-  font-weight: 700;
-  font-size: 14px;
-  flex-shrink: 0;
+  gap: 12px;
 }
 
 .footer-logo-text {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 800;
   background: linear-gradient(135deg, var(--accent2), var(--accent1));
   -webkit-background-clip: text;
   background-clip: text;
@@ -1465,23 +1310,20 @@ body {
 
 .footer-description {
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.5;
-  margin: 0;
-  max-width: 100%;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 300px;
 }
 
 .footer-social {
   display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin-top: 10px;
+  gap: 12px;
 }
 
 .social-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1492,77 +1334,65 @@ body {
   color: var(--muted);
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 13px;
+  font-size: 16px;
 }
 
-/* Footer Links - Lebih Rapi */
-.footer-links {
-  text-align: center;
+.social-icon:hover {
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(138,43,226,0.3);
 }
 
 .footer-links h3 {
-  font-size: 15px;
-  margin-bottom: 12px;
+  font-size: 18px;
+  margin-bottom: 20px;
   color: var(--text-light);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .footer-links ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  align-items: center;
+  gap: 12px;
 }
 
 .footer-links a {
   color: var(--muted);
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
 }
 
 .footer-links a:hover {
   color: var(--accent2);
-}
-
-/* Newsletter - Form Lebih Kecil */
-.footer-newsletter {
-  text-align: center;
+  transform: translateX(5px);
 }
 
 .footer-newsletter h3 {
-  font-size: 15px;
-  margin-bottom: 12px;
+  font-size: 18px;
+  margin-bottom: 20px;
   color: var(--text-light);
-  font-weight: 600;
-}
-
-.newsletter-subtitle {
-  color: var(--muted);
-  font-size: 12px;
-  margin-bottom: 15px;
-  line-height: 1.4;
+  font-weight: 700;
 }
 
 .newsletter-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 280px;
-  margin: 0 auto;
+  gap: 15px;
 }
 
 .newsletter-input {
-  padding: 10px 12px;
-  border-radius: 8px;
+  padding: 15px 20px;
+  border-radius: 12px;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
   color: var(--text);
-  font-size: 12px;
+  font-size: 14px;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
@@ -1570,218 +1400,52 @@ body {
 .newsletter-input:focus {
   outline: none;
   border-color: var(--accent1);
-  box-shadow: 0 0 0 2px rgba(138,43,226,0.2);
+  box-shadow: 0 0 0 3px rgba(138,43,226,0.2);
+  background: rgba(255,255,255,0.08);
 }
 
 .newsletter-btn {
-  padding: 10px 12px;
-  border-radius: 8px;
+  padding: 15px 20px;
+  border-radius: 12px;
   background: linear-gradient(135deg, var(--accent2), var(--accent1));
   color: white;
   border: none;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .newsletter-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(138,43,226,0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(138,43,226,0.4);
 }
 
-/* Footer Bottom - Lebih Kompak */
 .footer-bottom {
-  padding-top: 20px;
+  padding-top: 30px;
   border-top: 1px solid rgba(255,255,255,0.05);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
-  gap: 12px;
-  text-align: center;
-}
-
-.copyright {
-  font-size: 11px;
 }
 
 .footer-legal {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 25px;
 }
 
 .footer-legal a {
   color: var(--muted);
   text-decoration: none;
   transition: color 0.3s ease;
-  font-size: 11px;
 }
 
 .footer-legal a:hover {
   color: var(--accent2);
 }
 
-/* TABLET LAYOUT */
-@media (min-width: 768px) {
-  .footer-section {
-    padding: 50px 0 25px;
-    font-size: 14px;
-  }
-  
-  .footer-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 30px;
-    margin-bottom: 35px;
-    padding: 0 20px;
-  }
-  
-  .footer-brand {
-    text-align: left;
-    align-items: flex-start;
-  }
-  
-  .footer-logo {
-    justify-content: flex-start;
-  }
-  
-  .footer-social {
-    justify-content: flex-start;
-  }
-  
-  .footer-links {
-    text-align: left;
-  }
-  
-  .footer-links ul {
-    align-items: flex-start;
-  }
-  
-  .footer-newsletter {
-    text-align: left;
-  }
-  
-  .newsletter-form {
-    margin: 0;
-  }
-  
-  .footer-bottom {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 25px 20px 0;
-    font-size: 12px;
-  }
-  
-  .copyright {
-    font-size: 12px;
-  }
-  
-  .footer-legal a {
-    font-size: 12px;
-  }
-}
-
-/* DESKTOP LAYOUT */
-@media (min-width: 1024px) {
-  .footer-content {
-    padding: 0 40px;
-    gap: 40px;
-  }
-  
-  .footer-logo .logo {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .footer-logo-text {
-    font-size: 20px;
-  }
-  
-  .footer-description {
-    font-size: 14px;
-  }
-  
-  .footer-links h3,
-  .footer-newsletter h3 {
-    font-size: 16px;
-  }
-  
-  .footer-links a {
-    font-size: 13px;
-  }
-  
-  .newsletter-input,
-  .newsletter-btn {
-    font-size: 13px;
-    padding: 12px 15px;
-  }
-}
-
-/* OPTIMASI TAMBAHAN UNTUK MOBILE */
-@media (max-width: 480px) {
-  .footer-section {
-    padding: 30px 0 15px;
-  }
-  
-  .footer-content {
-    gap: 25px;
-    padding: 0 10px;
-  }
-  
-  .footer-logo {
-    gap: 8px;
-  }
-  
-  .footer-logo .logo {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .footer-logo-text {
-    font-size: 16px;
-  }
-  
-  .footer-description {
-    font-size: 12px;
-  }
-  
-  .social-icon {
-    width: 28px;
-    height: 28px;
-    font-size: 12px;
-  }
-  
-  .footer-links h3 {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-links a {
-    font-size: 11px;
-  }
-  
-  .newsletter-form {
-    max-width: 100%;
-  }
-  
-  .footer-bottom {
-    gap: 10px;
-    font-size: 10px;
-  }
-  
-  .footer-legal {
-    gap: 10px;
-  }
-  
-  .footer-legal a {
-    font-size: 10px;
-  }
-}
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero {
@@ -2960,6 +2624,160 @@ body {
   }
 }
 
+/* FOCUS AREAS SECTION */
+.focus-areas-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.focus-areas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.focus-card {
+  background: linear-gradient(135deg, 
+    rgba(255,255,255,0.04), 
+    rgba(255,255,255,0.02));
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.focus-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--accent1), 
+    transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.focus-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(138,43,226,0.15);
+}
+
+.focus-card:hover::before {
+  opacity: 1;
+}
+
+.focus-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.focus-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent2), var(--accent1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.focus-description {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* TABLET LAYOUT */
+@media (min-width: 768px) {
+  .focus-areas-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    padding: 0 30px;
+  }
+  
+  .focus-card {
+    flex: 1;
+    max-width: none;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .focus-icon {
+    font-size: 3rem;
+  }
+  
+  .focus-title {
+    font-size: 1.4rem;
+  }
+  
+  .focus-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* DESKTOP LAYOUT */
+@media (min-width: 1024px) {
+  .focus-areas-container {
+    gap: 40px;
+    padding: 0 40px;
+  }
+  
+  .focus-card {
+    padding: 50px 30px;
+    min-height: 280px;
+  }
+  
+  .focus-icon {
+    font-size: 4rem;
+    margin-bottom: 25px;
+  }
+  
+  .focus-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  .focus-description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+}
+
+/* ANIMASI STAGGER UNTUK CARD */
+.focus-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.focus-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.focus-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
 /* SECTION STYLES */
 .section {
   padding: 50px 0;
@@ -3609,158 +3427,4 @@ body {
     animation: none !important;
     transition: none !important;
   }
-}
-
-/* FOCUS AREAS SECTION */
-.focus-areas-section {
-  padding: 60px 0;
-  text-align: center;
-}
-
-.focus-areas-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.focus-card {
-  background: linear-gradient(135deg, 
-    rgba(255,255,255,0.04), 
-    rgba(255,255,255,0.02));
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  padding: 40px 30px;
-  text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 350px;
-  animation: slideInUp 0.8s ease-out;
-}
-
-.focus-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, 
-    transparent, 
-    var(--accent1), 
-    transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.focus-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(138,43,226,0.15);
-}
-
-.focus-card:hover::before {
-  opacity: 1;
-}
-
-.focus-icon {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  display: block;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
-}
-
-.focus-title {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--accent2), var(--accent1));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.focus-description {
-  color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* TABLET LAYOUT */
-@media (min-width: 768px) {
-  .focus-areas-container {
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    gap: 25px;
-    padding: 0 30px;
-  }
-  
-  .focus-card {
-    flex: 1;
-    max-width: none;
-    min-height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .focus-icon {
-    font-size: 3rem;
-  }
-  
-  .focus-title {
-    font-size: 1.4rem;
-  }
-  
-  .focus-description {
-    font-size: 0.95rem;
-  }
-}
-
-/* DESKTOP LAYOUT */
-@media (min-width: 1024px) {
-  .focus-areas-container {
-    gap: 40px;
-    padding: 0 40px;
-  }
-  
-  .focus-card {
-    padding: 50px 30px;
-    min-height: 280px;
-  }
-  
-  .focus-icon {
-    font-size: 4rem;
-    margin-bottom: 25px;
-  }
-  
-  .focus-title {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-  }
-  
-  .focus-description {
-    font-size: 1.05rem;
-    line-height: 1.7;
-  }
-}
-
-/* ANIMASI STAGGER UNTUK CARD */
-.focus-card:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.focus-card:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.focus-card:nth-child(3) {
-  animation-delay: 0.3s;
 }
